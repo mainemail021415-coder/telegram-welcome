@@ -24,7 +24,7 @@
             color: #5a4a4a;
         }
 
-        /* Chunky Rounded Pastel Frame Card */
+        /* Main Card Container */
         .welcome-card {
             background: #fffcfc;
             border: 6px solid #f2e3e5;
@@ -37,51 +37,51 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        /* Top Illustration Box inside Card */
-        .card-header-box {
-            background: linear-gradient(180deg, #ffccd5 0%, #ffedf0 100%);
-            border-radius: 24px;
-            padding: 24px 15px;
-            margin-bottom: 20px;
-            position: relative;
+        /* Picture Frame para sa iyong design image */
+        .image-container {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(232, 197, 203, 0.3);
         }
 
-        .bunny-emoji {
-            font-size: 3.5rem;
-            margin-bottom: 5px;
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         h1 {
             font-family: 'Georgia', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #7a5c61;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-style: italic;
             font-weight: normal;
         }
 
         p.description {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #776b6d;
             line-height: 1.5;
-            margin-bottom: 22px;
-            padding: 0 10px;
+            margin-bottom: 20px;
+            padding: 0 5px;
         }
 
-        /* Peony Cutie Owner Button Style */
+        /* Peony Cutie Owner Button */
         .owner-button {
             display: inline-block;
             background: #e8c5cb;
             color: #fff;
-            padding: 10px 24px;
+            padding: 10px 22px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             box-shadow: 0 4px 12px rgba(232, 197, 203, 0.5);
             letter-spacing: 0.5px;
         }
 
-        /* Subtle Floating Animation */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-6px); }
@@ -92,30 +92,26 @@
 <body>
 
     <div class="welcome-card">
-        <!-- Itaas na may pink gradient background at bunny -->
-        <div class="card-header-box">
-            <div class="bunny-emoji">🐰🌸</div>
+        <!-- Dito natin ilalagay ang eksaktong image mo -->
+        <div class="image-container">
+            <img src="welcome.png" alt="Welcome Bunny">
         </div>
 
-        <!-- Heading na kapareho ng vibe -->
         <h1>Hey Cutiepie</h1>
-
-        <!-- Mensahe -->
+        
         <p class="description">
             welcome to my humble shop. enjoy to choose anything but make sure to check out. mwahh
         </p>
 
-        <!-- Button sa ilalim -->
         <div class="owner-button">
             peony cutie owner ♥
         </div>
     </div>
 
     <script>
-        // Tell Telegram WebApp that the Mini App is ready
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.ready();
-            window.Telegram.WebApp.expand(); // Auto full height inside Telegram
+            window.Telegram.WebApp.expand();
         }
     </script>
 </body>
