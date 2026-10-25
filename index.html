@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Humble Shop</title>
+    <!-- Telegram Web App Script -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: rgba(255, 240, 245, 0.4);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #5a4a4a;
+        }
+
+        /* Chunky Rounded Pastel Frame Card */
+        .welcome-card {
+            background: #fffcfc;
+            border: 6px solid #f2e3e5;
+            border-radius: 36px;
+            padding: 20px;
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(242, 227, 229, 0.6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Top Illustration Box inside Card */
+        .card-header-box {
+            background: linear-gradient(180deg, #ffccd5 0%, #ffedf0 100%);
+            border-radius: 24px;
+            padding: 24px 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .bunny-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 1.6rem;
+            color: #7a5c61;
+            margin-bottom: 12px;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        p.description {
+            font-size: 0.9rem;
+            color: #776b6d;
+            line-height: 1.5;
+            margin-bottom: 22px;
+            padding: 0 10px;
+        }
+
+        /* Peony Cutie Owner Button Style */
+        .owner-button {
+            display: inline-block;
+            background: #e8c5cb;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(232, 197, 203, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        /* Subtle Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-card">
+        <!-- Itaas na may pink gradient background at bunny -->
+        <div class="card-header-box">
+            <div class="bunny-emoji">🐰🌸</div>
+        </div>
+
+        <!-- Heading na kapareho ng vibe -->
+        <h1>Hey Cutiepie</h1>
+
+        <!-- Mensahe -->
+        <p class="description">
+            welcome to my humble shop. enjoy to choose anything but make sure to check out. mwahh
+        </p>
+
+        <!-- Button sa ilalim -->
+        <div class="owner-button">
+            peony cutie owner ♥
+        </div>
+    </div>
+
+    <script>
+        // Tell Telegram WebApp that the Mini App is ready
+        if (window.Telegram && window.Telegram.WebApp) {
+            window.Telegram.WebApp.ready();
+            window.Telegram.WebApp.expand(); // Auto full height inside Telegram
+        }
+    </script>
+</body>
+</html>
